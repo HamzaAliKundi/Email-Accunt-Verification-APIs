@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api/user", require("./routes/Accounts"));
+app.use("/user", require("./routes/Accounts"));
 
 app.use(errorHandler);
 app.listen(port, () => console.log(`Server started at ${port}`));
