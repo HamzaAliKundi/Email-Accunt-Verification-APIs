@@ -17,9 +17,8 @@ const RegisterUser = mongoose.Schema(
       require: [true, "No Password provided"],
     },
 
-    superAdmin: {
+    verified: {
       type: Boolean,
-      default: false,
     },
   },
   {
