@@ -27,7 +27,7 @@ transpoter.verify((error, success) => {
 });
 
 const sendVerificationEmail = ({ _id, email }, res) => {
-  const currentUrl = "http://localhost:3000/";
+  const currentUrl = "http://localhost:5000/";
   // const uniqueString = uuidv9() + _id;
   const uniqueString = _id.toString();
 
@@ -36,7 +36,7 @@ const sendVerificationEmail = ({ _id, email }, res) => {
     to: email,
     subject: "Verify Your Email",
     html: `<p>Verify your email address to complete Signup and login into your account.</p><p>This link <b>expires in 6 hours</b>.</p><p>Press <a href=${
-      currentUrl + "user/verify" + _id + "/" + uniqueString
+      currentUrl + "user/verify/" + _id + "/" + uniqueString
     }>here</a> to proceed.</p>`,
   };
 
